@@ -13,7 +13,7 @@ public final class ModCommon {
 	public static final String MOD_SERVER_SIDE = ".core.CommonProxy";
 	public static final String MOD_FACTRY = ".client.config.MeetBlockFactory";
 	// モッドバージョン
-	public static final String MOD_VERSION = "@VERSION@";
+	public static final String MOD_VERSION = "1.12.2";
 	// コンフィグファイル名
 	public static final String MOD_CONFIG_FILE = "";
 	// コンフィグ
