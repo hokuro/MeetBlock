@@ -1,6 +1,5 @@
 tile.meetcow.name=Meetblock Cow
 item.cooked_rotten_flesh.name=cooked rotten_flesh
-item.cooked_puffer.name = cooked puffer
 item.cooked_clown.name=cooked clown
 tile.meetpig.name=Meetblock Pig
 tile.meetchikin.name=Meetblock Chikin
@@ -8,6 +7,7 @@ tile.meetmutton.name=Meetblock Mutton
 tile.meetrabitt.name=Meetblock Rabitt
 tile.meetzombie.name=Meetblock Zombie
 tile.fishfish.name=Fishblock Cod
-tile.fishsalmon.namee=Fishblock Salmon
+tile.fishsalmon.name=Fishblock Salmon
 tile.fishclown.name=Fishblock Clown
 tile.fishfuffer.name=Fishblock Puffer
+item.cooked_puffer.name=cooked puffer

@@ -59,7 +59,7 @@ public class Mod_MeetBlock {
 		// メッセージ登録
 		ModRegister.RegisterMessage();
 		// レシピ追加
-		ModRegister.RegisterRecipe();
+		//ModRegister.RegisterRecipe();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new ModGui());
 	}
 

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "meetblock_cooked",
+  "pattern": [
+    "MM",
+    "MM"
+  ],
+  "key": {
+    "M": {
+        "item": "minecraft:cooked_porkchop"
+      }
+  },
+  "result": {
+    "item": "meetblock:meetpig",
+    "count": 1,
+    "data": 1
+  }
+}

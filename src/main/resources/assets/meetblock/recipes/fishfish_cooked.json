@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fishblock_cooked",
+  "pattern": [
+    "MM",
+    "MM"
+  ],
+  "key": {
+    "M": {
+        "item": "minecraft:cooked_fish",
+        "data": 0
+      }
+  },
+  "result": {
+    "item": "meetblock:fishfish",
+    "count": 1,
+    "data": 1
+  }
+}
