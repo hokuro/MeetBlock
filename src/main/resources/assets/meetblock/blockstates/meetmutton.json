@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "cooked=false":{ "model":"meetblock:meetmutton" },
+        "cooked=true":{ "model":"meetblock:meetmutton_cooked" }
+    }
+}

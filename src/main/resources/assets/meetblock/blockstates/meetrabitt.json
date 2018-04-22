@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "cooked=false":{ "model":"meetblock:meetrabitt" },
+        "cooked=true":{ "model":"meetblock:meetrabitt_cooked" }
+    }
+}

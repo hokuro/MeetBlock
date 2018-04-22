@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "cooked=false":{ "model":"meetblock:fishclown" },
+        "cooked=true":{ "model":"meetblock:fishclown_cooked" }
+    }
+}

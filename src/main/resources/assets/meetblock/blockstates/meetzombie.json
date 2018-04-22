@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "cooked=false":{ "model":"meetblock:meetzombie" },
+        "cooked=true":{ "model":"meetblock:meetzombie_cooked" }
+    }
+}
