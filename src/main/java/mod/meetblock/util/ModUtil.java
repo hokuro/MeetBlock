@@ -19,7 +19,7 @@ public class ModUtil {
 		if (stack1 == null){return false;}
 		if (stack2 == null){return false;}
 		if (stack1.isEmpty() && stack2.isEmpty()){return true;}
-		return (stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata()));
+		return (stack2.getItem() == stack1.getItem());
 	}
 
 	public static boolean compareItemStacks(ItemStack stack1, ItemStack stack2, CompaierLevel level){
@@ -31,7 +31,6 @@ public class ModUtil {
 		switch(level){
 		case LEVEL_EQUAL_ALL:
 			ret = ((stack1.getItem() == stack2.getItem()) &&
-					stack1.getMetadata() == stack2.getMetadata() &&
 					stack1.getCount() == stack2.getCount());
 			break;
 		case LEVEL_EQUAL_COUNT:
@@ -42,8 +41,7 @@ public class ModUtil {
 			ret = ((stack1.getItem() == stack2.getItem()));
 			break;
 		case LEVEL_EQUAL_META:
-			ret = ((stack1.getItem() == stack2.getItem()) &&
-					stack1.getMetadata() == stack2.getMetadata());
+			ret = ((stack1.getItem() == stack2.getItem()));
 			break;
 		default:
 			break;
@@ -77,7 +75,7 @@ public class ModUtil {
 
         while (!stack.isEmpty())
         {
-            EntityItem entityitem = new EntityItem(worldIn, x + (double)f, y + (double)f1, z + (double)f2, stack.splitStack(RANDOM.nextInt(21) + 10));
+            EntityItem entityitem = new EntityItem(worldIn, x + (double)f, y + (double)f1, z + (double)f2, stack);
             float f3 = 0.05F;
             entityitem.motionX = RANDOM.nextGaussian() * 0.05000000074505806D;
             entityitem.motionY = RANDOM.nextGaussian() * 0.05000000074505806D + 0.20000000298023224D;

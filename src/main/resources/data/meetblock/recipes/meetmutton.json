@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"MM",
+		"MM"
+	],
+	"key": {
+		"M": {
+			"item": "minecraft:mutton"
+		}
+	},
+	"result": {
+		"item": "meetblock:meetmutton"
+	}
+}

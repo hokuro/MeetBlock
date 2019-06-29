@@ -1,19 +1,18 @@
 package mod.meetblock.network;
 
-import io.netty.buffer.ByteBuf;
+import java.util.function.Supplier;
+
 import mod.meetblock.block.BlockMeet;
 import net.minecraft.client.Minecraft;
+import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
-import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.fml.network.NetworkEvent;
 
-public class MessageBurnSound implements IMessage, IMessageHandler<MessageBurnSound, IMessage> {
+public class MessageBurnSound {
 
 	private int posx;
 	private int posy;
 	private int posz;
-	public MessageBurnSound(){}
 
 	public MessageBurnSound(int x, int y, int z){
 		posx = x;
@@ -22,23 +21,30 @@ public class MessageBurnSound implements IMessage, IMessageHandler<MessageBurnSo
 	}
 
 
-	@Override
-	public void fromBytes(ByteBuf buf) {
-		posx = buf.readInt();
-		posy = buf.readInt();
-		posz = buf.readInt();
+	public static void encode(MessageBurnSound pkt, PacketBuffer buf)
+	{
+		buf.writeInt(pkt.posx);
+		buf.writeInt(pkt.posy);
+		buf.writeInt(pkt.posz);
 	}
 
-	@Override
-	public void toBytes(ByteBuf buf) {
-		buf.writeInt(posx);
-		buf.writeInt(posy);
-		buf.writeInt(posz);
+	public static MessageBurnSound decode(PacketBuffer buf)
+	{
+		int x = buf.readInt();
+		int y = buf.readInt();
+		int z = buf.readInt();
+		return new MessageBurnSound(x,y,z);
 	}
 
-	@Override
-	public IMessage onMessage(MessageBurnSound message, MessageContext ctx){
-		BlockMeet.DisplayParticle(Minecraft.getMinecraft().world, new BlockPos(message.posx,message.posy,message.posz));
-		return null;
+	public static class Handler
+	{
+		public static void handle(final MessageBurnSound pkt, Supplier<NetworkEvent.Context> ctx)
+		{
+			ctx.get().enqueueWork(() -> {
+				BlockMeet.DisplayParticle(Minecraft.getInstance().world, new BlockPos(pkt.posx,pkt.posy,pkt.posz));
+			});
+			ctx.get().setPacketHandled(true);
+		}
 	}
+
 }

@@ -1,0 +1,9 @@
+{
+    "type": "smelting",
+    "ingredient": {
+        "item": "meetblock:meetchikin"
+    },
+    "result": "meetblock:meetchikin_cooked",
+    "experience": 0.1,
+    "cookingtime": 200
+}

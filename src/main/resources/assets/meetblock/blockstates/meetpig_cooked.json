@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "":{ "model":"meetblock:block/meetpig_cooked" }
+    }
+}

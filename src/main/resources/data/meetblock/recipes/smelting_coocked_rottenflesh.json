@@ -1,0 +1,9 @@
+{
+    "type": "smelting",
+    "ingredient": {
+        "item": "minecraft:rotten_flesh"
+    },
+    "result": "meetblock:cooked_rotten_flesh",
+    "experience": 0.1,
+    "cookingtime": 200
+}

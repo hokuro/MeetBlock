@@ -1,6 +1,5 @@
 {
     "variants": {
-        "cooked=false":{ "model":"meetblock:meetchikin" },
-        "cooked=true":{ "model":"meetblock:meetchikin_cooked" }
+        "":{ "model":"meetblock:block/meetchikin" }
     }
 }
