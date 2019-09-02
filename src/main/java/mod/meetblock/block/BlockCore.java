@@ -191,14 +191,14 @@ public class BlockCore{
 	}
 
 	public static void registerBlock(final RegistryEvent.Register<Block> event){
-		init();
+		if (blockMap == null){ init();}
 		for (String name : NAME_LIST){
 			event.getRegistry().register(blockMap.get(name));
 		}
 	}
 
 	public static void registerItemBlock(final RegistryEvent.Register<Item> event){
-		init();
+		if (blockMap == null){ init();}
 		for (String name : NAME_LIST){
 			event.getRegistry().register(itemMap.get(name));
 		}
